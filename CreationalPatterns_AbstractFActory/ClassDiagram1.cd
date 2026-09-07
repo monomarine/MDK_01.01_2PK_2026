@@ -1,5 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CreationalPatterns_AbstractFActory.ElfArmyFactory" Collapsed="true">
+    <Position X="6.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAgABEAAAAIAAAAAABAABAAAAAAAAAAAE=</HashCode>
+      <FileName>ElfArmyFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CreationalPatterns_AbstractFActory.HumanArmyFactory" Collapsed="true">
+    <Position X="8.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAgABEAAAAIAAAAAABAABAAAAAAAAAAAE=</HashCode>
+      <FileName>HumanArmyFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CreationalPatterns_AbstractFActory.OrkArmyFactory" Collapsed="true">
+    <Position X="9" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAACAgAAEAAAAAAAAAAABAABAAQAAAQAAAAE=</HashCode>
+      <FileName>OrkArmyFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
   <Interface Name="CreationalPatterns_AbstractFActory.IWarrior">
     <Position X="0.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>

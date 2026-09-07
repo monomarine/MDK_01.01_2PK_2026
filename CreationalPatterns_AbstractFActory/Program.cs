@@ -6,9 +6,12 @@
         {
 
             GameManager humanManager = new GameManager(new HumanArmyFactory());
+            GameManager elfManager = new GameManager(new ElfArmyFactory());
+            GameManager orkManager = new GameManager(new OrkArmyFactory());
 
- 
-            humanManager.PrintInfo();
+            //humanManager.PrintInfo();
+            //elfManager.PrintInfo();
+            orkManager.PrintInfo();
 
            
         }

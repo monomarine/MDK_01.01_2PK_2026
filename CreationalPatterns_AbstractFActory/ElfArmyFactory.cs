@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CreationalPatterns_AbstractFActory
 {
-    internal class HumanArmyFactory : IArmyFactory
+    internal class ElfArmyFactory : IArmyFactory
     {
         private List<IWarrior> warriors = new List<IWarrior>();
         private List<IArcher> archers = new List<IArcher>();
@@ -19,19 +19,19 @@ namespace CreationalPatterns_AbstractFActory
         public void GenerateArchers(int count)
         {
             for (int i = 0; i < count; i++)
-                archers.Add(new HumanArcher());
+                archers.Add(new ElfArcher());
         }
 
         public void GenerateMages(int count)
         {
             for (int i = 0; i < count; i++)
-                mages.Add(new HumanMage());
+                mages.Add(new ElfMage());
         }
 
         public void GenerateWarriors(int count)
         {
             for (int i = 0; i < count; i++)
-                warriors.Add(new HumanWarrior());
+                warriors.Add(new ElfWarrior());
         }
 
     }
