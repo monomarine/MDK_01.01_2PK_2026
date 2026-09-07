@@ -1,4 +1,8 @@
-﻿namespace CreationalPatterns_AbstractFActory
+﻿using CreationalPatterns_AbstractFActory.ElfArmy;
+using CreationalPatterns_AbstractFActory.HumanArmy;
+using CreationalPatterns_AbstractFActory.OrkArmy;
+
+namespace CreationalPatterns_AbstractFActory
 {
     internal class Program
     {

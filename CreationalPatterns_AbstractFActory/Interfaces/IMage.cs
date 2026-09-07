@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CreationalPatterns_AbstractFActory
+namespace CreationalPatterns_AbstractFActory.Interfaces
 {
-    public interface IWarrior
+    public interface IMage
     {
-        void Attack();
+        void Cast();
     }
 }

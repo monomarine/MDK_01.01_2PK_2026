@@ -1,37 +1,39 @@
-﻿using System;
+﻿using CreationalPatterns_AbstractFActory.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CreationalPatterns_AbstractFActory
+namespace CreationalPatterns_AbstractFActory.ElfArmy
 {
-    internal class OrkArmyFactory : IArmyFactory
+    internal class ElfArmyFactory : IArmyFactory
     {
         private List<IWarrior> warriors = new List<IWarrior>();
         private List<IArcher> archers = new List<IArcher>();
         private List<IMage> mages = new List<IMage>();
-        public List<IWarrior> Warriors { get => warriors; set => warriors = value; }
-        public List<IArcher> Archers { get => archers; set => archers = value; }
-        public List<IMage> Mages { get => mages; set => mages = value; }
+
+        List<IWarrior> IArmyFactory.Warriors { get => warriors; set => warriors = value; }
+        List<IArcher> IArmyFactory.Archers { get => archers; set => archers = value; }
+        List<IMage> IArmyFactory.Mages { get => mages; set => mages = value; }
 
         public void GenerateArchers(int count)
         {
             for (int i = 0; i < count; i++)
-                archers.Add(new OrkArcher());
+                archers.Add(new ElfArcher());
         }
 
         public void GenerateMages(int count)
         {
             for (int i = 0; i < count; i++)
-                mages.Add(new OrkMag());
+                mages.Add(new ElfMage());
         }
 
         public void GenerateWarriors(int count)
         {
             for (int i = 0; i < count; i++)
-                warriors.Add(new OrkWarrior());
+                warriors.Add(new ElfWarrior());
         }
+
     }
 }
