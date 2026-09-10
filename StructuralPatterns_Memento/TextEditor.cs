@@ -6,7 +6,6 @@ namespace CreationalPattern_Memento
 {
     internal class TextEditor
     {
-        
         private CareTaker _caretaker;
         private StringBuilder _text = new StringBuilder();
         public TextEditor()

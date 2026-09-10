@@ -2,6 +2,6 @@
   <Folder Name="/Элементы решения/" />
   <Project Path="CreationalPatterns_AbstractFActory/CreationalPatterns_AbstractFActory.csproj" Id="2c375721-a30e-4a7d-ac14-9b15bcaba216" />
   <Project Path="CreationalPatterns_FactoryMethod/CreationalPatterns_FactoryMethod.csproj" />
-  <Project Path="CreationalPattern_Memento/CreationalPattern_Memento.csproj" Id="df1cc5d5-ccef-4fe0-b7c5-0122f13293b3" />
   <Project Path="StructuralPatterns_Facade/StructuralPatterns_Facade.csproj" Id="7b5ef567-c3b2-4a32-a324-253926da4f63" />
+  <Project Path="StructuralPatterns_Memento/StructuralPatterns_Memento.csproj" />
 </Solution>
