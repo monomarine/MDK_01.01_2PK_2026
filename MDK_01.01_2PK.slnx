@@ -1,8 +1,8 @@
 <Solution>
-  <Folder Name="/Элементы решения/" />
   <Project Path="BehaviourPatterns_TemplateMethod/BehaviourPatterns_TemplateMethod.csproj" Id="d105f485-58ea-4d1d-9e54-32adafb16da1" />
   <Project Path="CreationalPatterns_AbstractFActory/CreationalPatterns_AbstractFActory.csproj" Id="2c375721-a30e-4a7d-ac14-9b15bcaba216" />
   <Project Path="CreationalPatterns_FactoryMethod/CreationalPatterns_FactoryMethod.csproj" />
   <Project Path="StructuralPatterns_Facade/StructuralPatterns_Facade.csproj" Id="7b5ef567-c3b2-4a32-a324-253926da4f63" />
   <Project Path="StructuralPatterns_Memento/StructuralPatterns_Memento.csproj" />
+  <Project Path="WPF-demo/WPF-demo.csproj" Id="8a41c772-d204-4ffb-8e59-400d6ccb8d34" />
 </Solution>
