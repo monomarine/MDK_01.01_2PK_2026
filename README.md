@@ -7,3 +7,4 @@
 
 ## Структурные паттерны
 1. [Фасад](https://github.com/monomarine/MDK_01.01_2PK_2026/tree/master/StructuralPatterns_Facade)
+2. [Снимок](https://github.com/monomarine/MDK_01.01_2PK_2026/tree/master/StructuralPatterns_Memento)
