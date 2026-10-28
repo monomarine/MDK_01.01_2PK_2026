@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 
 
 namespace Refactoring
@@ -18,19 +10,13 @@ namespace Refactoring
     /// </summary>
     public partial class MainWindow : Window
     {
-        // [ЗАПАХ: неиспользуемое поле — VS 2026 подсветит серым]
-        private int _unusedCounter = 0;
+        Order oreder = new Order(10, 15);
 
         // [ЗАПАХ: магическое число]
         private const int MAX_NAME_LENGTH = 20;
         public MainWindow()
         {
             InitializeComponent();
-            // [ЗАПАХ: неиспользуемая локальная переменная — серая подсказка VS]
-            string temp = "инициализация";
-            // [ПРЕДУПРЕЖДЕНИЕ VS 2026: возможный NullReferenceException,
-            //  если textBox1 не инициализирован — но здесь сработает]
-            textBox1.Text = "";
         }
 
         // [ЗАПАХ: «божественный» метод ~100 строк]
@@ -38,25 +24,21 @@ namespace Refactoring
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             // [ЗАПАХ: прямое чтение контролов внутри "логики"]
-            string name = textBox1.Text;
-            string email = textBox2.Text;
-            string qtyText = textBox3.Text;
-            string priceText = textBox4.Text;
+            string name = nameTextBox.Text;
+            string email = emailTextBx.Text;
+            string qtyText = countTextBox.Text;
+            string priceText = priceTextBox.Text;
 
             // [ЗАПАХ: валидация, которая ДУБЛИРУЕТСЯ в SaveButton_Click]
-            if (name == null || name.Trim() == "")
+            bool is_name_correct = NameValidate(name);
+            bool is_name_lebght_correct = NameLenghtValidate(name);
+
+            if (!is_name_correct || !is_name_lebght_correct)
             {
-                MessageBox.Show("Введите имя клиента", "Ошибка",
-                    MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
-            if (name.Length > MAX_NAME_LENGTH)
-            {
-                MessageBox.Show("Имя слишком длинное", "Ошибка",
-                    MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
+
 
             if (email == null || email.Trim() == "")
             {
@@ -133,8 +115,31 @@ namespace Refactoring
             labelResult.Content = $"Итого: {total:F2} руб.";
             listBox1.Items.Add(summary);
 
-            // [ЗАПАХ: неиспользуемая локальная переменная — VS подсветит]
-            string debugInfo = "расчёт выполнен";
+            Order r= new Order(23,8);
+        }
+
+        private static bool NameLenghtValidate(string name)
+        {
+            if (name.Length > MAX_NAME_LENGTH)
+            {
+                MessageBox.Show("Имя слишком длинное", "Ошибка",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                return false;
+            }
+
+            return true;
+        }
+
+        private static bool NameValidate(string name)
+        {
+            if (name == null || name.Trim() == "")
+            {
+                MessageBox.Show("Введите имя клиента", "Ошибка",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                return false;
+            }
+
+            return true;
         }
 
         // [ЗАПАХ: ДУБЛИРОВАНИЕ валидации из CalculateButton_Click]
@@ -142,23 +147,17 @@ namespace Refactoring
         // и тот же try/catch — копипаста
         private void CalculateButton_Click(object sender, RoutedEventArgs e)
         {
-            string name = textBox1.Text;
-            string email = textBox2.Text;
-            string qtyText = textBox3.Text;
-            string priceText = textBox4.Text;
+            string name = nameTextBox.Text;
+            string email = emailTextBx.Text;
+            string qtyText = countTextBox.Text;
+            string priceText = priceTextBox.Text;
 
             // [КОПИПАСТА 1: та же проверка имени]
-            if (name == null || name.Trim() == "")
-            {
-                MessageBox.Show("Введите имя клиента", "Ошибка",
-                    MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
+            bool is_name_correct = NameValidate(name);
+            bool is_name_lebght_correct = NameLenghtValidate(name);
 
-            if (name.Length > MAX_NAME_LENGTH)
+            if (!is_name_correct || !is_name_lebght_correct)
             {
-                MessageBox.Show("Имя слишком длинное", "Ошибка",
-                    MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 

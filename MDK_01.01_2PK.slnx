@@ -3,6 +3,7 @@
   <Project Path="CreationalPatterns_AbstractFActory/CreationalPatterns_AbstractFActory.csproj" Id="2c375721-a30e-4a7d-ac14-9b15bcaba216" />
   <Project Path="CreationalPatterns_FactoryMethod/CreationalPatterns_FactoryMethod.csproj" />
   <Project Path="MultipleWindows/MultipleWindows.csproj" Id="2fd280e1-0d46-438d-a8e4-612737c4fc4a" />
+  <Project Path="Profiler/Profiler.csproj" Id="45da9618-9c86-49c4-9ccd-54a8cfea8e48" />
   <Project Path="Refactoring/Refactoring.csproj" Id="3d35eacd-915d-401a-a695-a400299ddaea" />
   <Project Path="Refactoring2/Refactoring2.csproj" Id="5f275e96-18a1-45a0-a2d9-919da91c5f6d" />
   <Project Path="StructuralPatterns_Facade/StructuralPatterns_Facade.csproj" Id="7b5ef567-c3b2-4a32-a324-253926da4f63" />

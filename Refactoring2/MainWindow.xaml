@@ -20,22 +20,22 @@
 
         <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,4">
             <TextBlock Text="ФИО студента:" Width="130"/>
-            <TextBox x:Name="textBox1" Width="420"/>
+            <TextBox x:Name="fullNameBox" Width="420"/>
         </StackPanel>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,4">
             <TextBlock Text="Группа:" Width="130"/>
-            <TextBox x:Name="textBox2" Width="420"/>
+            <TextBox x:Name="groupBox" Width="420"/>
         </StackPanel>
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,4">
             <TextBlock Text="Дисциплина:" Width="130"/>
-            <TextBox x:Name="textBox3" Width="420"/>
+            <TextBox x:Name="subjectBox" Width="420"/>
         </StackPanel>
 
         <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,4">
             <TextBlock Text="Оценка (2–5):" Width="130"/>
-            <TextBox x:Name="textBox4" Width="420"/>
+            <TextBox x:Name="gradeBox" Width="420"/>
         </StackPanel>
 
         <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="0,4">
@@ -49,14 +49,14 @@
 
         <StackPanel Grid.Row="5" Orientation="Horizontal" Margin="0,10">
             <Button x:Name="button1" Content="Добавить в ведомость" Width="160" Height="30"
-                    Margin="0,0,10,0" Click="button1_Click"/>
+                    Margin="0,0,10,0" Click="addButton"/>
             <Button x:Name="button2" Content="Сохранить в файл" Width="150" Height="30"
-                    Margin="0,0,10,0" Click="button2_Click"/>
+                    Margin="0,0,10,0" Click="SaveButtonClick"/>
             <Button x:Name="button3" Content="Очистить" Width="120" Height="30"
-                    Click="button3_Click"/>
+                    Click="ClearButtonClick"/>
         </StackPanel>
 
-        <Label x:Name="label1" Grid.Row="6" FontSize="15" FontWeight="Bold" Margin="0,5"/>
+        <Label x:Name="ListBox1" Grid.Row="6" FontSize="15" FontWeight="Bold" Margin="0,5"/>
 
         <ListBox x:Name="listBox1" Grid.Row="7" Margin="0,10"/>
     </Grid>
